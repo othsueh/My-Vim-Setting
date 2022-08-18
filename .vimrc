@@ -1,14 +1,12 @@
 set clipboard=unnamed
 
-"interfacebasic
-set number
-set cursorline
-set ruler
-set wrap
-set linebreak
-set showcmd
-set scrolloff=3
-
+"plugin
+call plug#begin("~/.vim/plugged")
+Plug 'ap/vim-css-color'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'preservim/nerdtree'
+call plug#end()
 
 "search
 set hlsearch
@@ -52,6 +50,5 @@ if executable("cpp")
 else
   autocmd BufRead,BufNewFile *.cpp noremap <F5> :echo "You need to install cpp first!"
 endif
-
 
 
